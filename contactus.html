@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactus.css">
+    <script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.cs">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+   
+    <title>Contact us page</title>
+</head>
+<body>
+<header class="header">
+    <a href="aboutus.html" class="logo"><img src="images/tapiwalogo.png" alt=""></a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+
+    </label>
+
+
+    <nav class="navbar">
+        <a href="aboutus.html" style="--i:0;">about</a>
+        <a href="home.html" style="--i:1;">home</a>
+        <a href="service.html" style="--i:2;">services</a>
+        <a href="portfolio.html" style="--i:3;">portfolio</a>
+        <a href="contactus.html" style="--i:4;">contact</a>
+    </nav>
+
+
+
+
+
+
+</header>
+ 
+    <div class="row">
+        <div class="column one l-form">
+            <form onsubmit="sendEmail(); reset(); return false;" class="form">
+                <!--<div class="image">
+                   
+                <img class="image" src="logo-removebg-preview.png" alt="Logo"><br><br><br>
+            </div>-->
+       
+                   <h1 class="form__title">Get in touch</h1>
+                   <div class="form__div">
+                    <input type="text" class="form__input" id="name" placeholder=" " required>
+                    <label for="name" class="form__label">Name</label>
+                </div>
+                <div class="form__div">
+                    <input type="email" id="email" class="form__input" placeholder=" " required>
+                    <label for="" class="form__label">Email</label>
+                </div>
+                <div class="form__div">
+                    <input type="text" class="form__input" placeholder=" " required>
+                    <label for="Phone Number" class="form__label">Phone Number</label>
+                </div>
+                <div class="form__div">
+                    <p style="border: 2px solid black;border-radius: .5rem; padding: 1rem;">
+                        Service - <br><br>
+                        <input type="radio" id="CE" placeholder=" " name="service">
+                        <label for="CE">Corporate Events</label><br>
+                        <input type="radio" id="SG" placeholder=" " name="service">
+                        <label for="SG">Social Gatherings</label><br>
+                        <input type="radio" id="ce" placeholder=" " name="service">
+                        <label for="ce">Cultural Events</label><br>
+                        <input type="radio" id="w" placeholder=" " name="service">
+                        <label for="w">Weddings</label><br>
+                       
+                    </p>
+                     
+                </div><br><br><br><br><br>
+                
+                <!--
+                            <div class="form__div">
+                    <input type="text" class="form__input" placeholder=" ">
+                    <label for="Theme" class="form__label">Theme (if any)</label>
+                </div>
+               
+                <div class="form__div">
+                    <input type="number" class="form__input" placeholder=" ">
+                    <label for="guests" class="form__label">Estimated Guests</label>
+                    </div>
+                   
+               
+                            <div class="form__div">
+                        <input type="date" class="form__input" placeholder=" ">
+                        <label for="Date" class="form__label">Requested date</label>
+                    </div>-->
+                    <div class="form__div">
+                        <textarea id="an" name="an" rows="4" cols="50" class="form__input" placeholder=" "></textarea>
+                        <label for="an" class="form__label">Additional Notes</label>
+                    </div>
+               
+                     
+                   <input type="submit" class="form__button" value="Submit">
+                    <!--
+                   <div class="wrapper ">
+                    <a href="https://www.facebook.com/segaroevents">
+                        <div class="icon facebook">
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </div>
+                    </a>
+                 
+                   <a href="https://www.instagram.com/jxinee._/">
+                    <div class="icon instagram">
+                        <span><i class="fab fa-instagram"></i></span>
+                    </div>
+                </a>
+                <a href="https://twitter.com/penguinsevents">
+                    <div class="icon twitter">
+                        <span><i class="fab fa-twitter"></i></span>
+                    </div>
+                </a>
+             
+                </div>-->
+     
+               
+               </form>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script>
+            function sendEmail() {
+               Email.send({
+       Host : "smtp.gmail.com",
+       Username : "allanasy",
+       Password : "",
+       To : 'allanasy44@gmail.com',
+       From : document.getElementById("email").value,
+       Subject : "New Contact Form Enquiry",
+       Body : "The details are -\n " + "Name : " + document.getElementById("name").value
+     
+    }).then(
+     message => alert("Message Sent")
+    );
+            }
+          </script>
+    
+        <div class="column two" id="frame">
+                       
+            
+                
+                    <footer class="footer">
+                        <div class="newsletter">
+                            <div class="container">
+                                <div class="box">
+                                 
+                                    <h2>Sign up to get latest update</h2>
+                                    <p>Sign up for our monthly newsletter for the latest news &amp; articles</p>
+                                </div>
+                                <div class="form">
+                                    <form>
+                                        <input type="email" name="email" placeholder="Enter Email Address" required="">
+                                        <button type="button">Subscribe Now</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+        </div>
+      </div>
+     
+    <footer class="footer-distributed">
+    
+        <div class="footer-left">
+            <h3><span>EOS</span> MEDIA</h3>
+    
+            <p class="footer-links">
+                <a href="aboutus.html">About</a>
+                |
+                <a href="contactus.html">Contact</a>
+            </p>
+    
+            <p class="footer-company-name">Copyright @2024 <strong>EOS</strong> MEDIA</p>
+        </div>
+    
+        <div class="footer-center">
+    
+            <div>
+                <a href="+263 784909899"><i class="uil uil-phone"></i></a>
+                <p> <a href="+263 784909899"></a>call us now</p>
+            </div>
+            <div>
+                <a href="tpmukandi@gmail.com"><i class="uil uil-envelope"></i></a>
+                <p><a href="tpmukandi@gmail.com"></a>email us now</p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the company</span>
+                <strong>EOS MEDIA</strong> is the place where you can give a life to your imagination.
+                In the very beginning, our team will create a personalised proposal tailored to fit all of your needs.
+            </p>
+            <div class="wrapper ">
+                <a href="https://www.facebook.com/photgraphy.eos.zw">
+                    <div class="icon facebook">
+                        <span><i class="uil uil-facebook-f"></i></span>
+                    </div>
+                </a>
+    
+                <a href="https://wa.me/c/263784909899">
+                    <div class="icon pinterest">
+                        <span><i class="uil uil-whatsapp"></i></span>
+                    </div>
+                </a>
+                <a href="https://zw.linkedin.com/in/tapiwanashe-mukandi-68b4b4284">
+                    <div class="icon linked-in">
+                        <span><i class="uil uil-linkedin"></i></span>
+                    </div>
+                </a>
+    
+                <a href="https://www.instagram.com/eos_shots/">
+                    <div class="icon instagram">
+                        <span><i class="uil uil-instagram"></i></span>
+                    </div>
+                </a>
+    
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

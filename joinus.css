@@ -1,0 +1,467 @@
+
+.topnav{
+    background:#f9bfbe;
+    text-align:right;
+    text-transform:uppercase;
+    height:3cm;
+}
+.topnav ul{
+    display:inline-flex;
+    list-style:none;
+   
+}
+ 
+.topnav ul li{
+    font-size: 0.6cm;
+   
+    margin-top:25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+    text-decoration: none;
+    text-transform: uppercase;
+   
+    text-align: right;
+    padding:15px;
+}
+ 
+ .topnav ul li a{
+    text-decoration:none;
+    color:black;
+ }
+ /* .topnav ul li a.active{
+    border:1px solid black;
+ }
+  */
+ 
+ul li a{
+    text-decoration:none;
+   
+    padding:5px 20px;
+   
+    transition:0.6s ease;
+   
+}
+.topnav ul li a:hover{
+    border:1px solid black;
+    background:transparent;
+    color:black;
+    border-radius: 25px;
+}
+ 
+#logo{
+   
+  /*  transform:translateX(-50%);*/
+ 
+position:absolute;
+margin : 0 auto;
+width: 120px;
+height:120px;
+top:0px;
+left: 0px;
+ margin-left:20px;
+}
+ 
+.submenu{
+    display:none;
+    position:relative;
+    z-index:100;
+   
+}
+ 
+ 
+.topnav ul li:hover .submenu{
+    display:block;
+    position:absolute;
+    background:#fff9f9ef;
+    margin-top:15px;
+    margin-left:-15px;
+}
+ 
+.topnav ul li:hover .submenu ul{
+    display:block;
+}
+ 
+.topnav ul li:hover .submenu ul li{
+   width:fit-content;
+    padding:15px;
+    background:transparent;
+    text-align:center;
+  margin-top:10px;
+  margin-bottom: 10px;
+top:0;
+}
+ 
+ 
+.topnav ul li:hover .submenu ul li a:hover{
+    color:#2596be;
+}
+/*for heading and line*/
+.heading {
+    text-align: center;
+    font-size: 2.0em;
+    letter-spacing: 1px;
+    padding: 20px;
+    color: black;
+    font-weight: normal;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*Change the four widths in heading and animate to change the size of line under heading*/
+.heading::before{
+  content:'';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color:black;
+  align-items: center;
+  bottom: 10px;
+  /*left: -40px;*/
+  right: 50%;
+  transform:translate(50%);
+  animation: animate 4s linear infinite;
+}
+/* Line Under Services */
+@keyframes animate {
+  0%{
+      width: 60px;
+  }
+  50%{
+      width: 120px;
+  }
+  100%{
+      width: 60px;
+  }
+}
+ 
+/*for columns*/
+* {
+    box-sizing: border-box;
+  }
+.column {
+    float: left;
+    width: 50%;
+    height: 300px;
+/*     white-space: nowrap; */
+    /* Should be removed. Only for demonstration */
+  }
+.one {
+    text-align: justify;
+  width:50%;
+   
+}
+.one h2 {
+    text-align: center;
+}
+.one p{
+    margin-left: 50px;
+    text-align: justify;
+    font-size: large;
+    font-weight: 525;
+}
+.two img{
+    margin-left: 100px;
+}
+.rows:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.un {
+    margin-top: 50px;
+}
+.un img {
+    margin-left: 120px;
+}
+.deux {
+    margin-top: 50px;
+}
+.deux p{
+    font-size: large;
+  text-align:justify;
+/*   padding:60px; */
+  margin-right:60px;
+  padding:20px;
+  
+}
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+/*for footer*/
+.wrapper{
+    display:inline-flex;
+    margin-top:20px;
+}
+.wrapper .icon{
+    margin:0 5px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    cursor:pointer;
+   
+}
+.wrapper .icon span{
+    position: relative;
+    height:40px;
+    width:40px;
+    display:block;
+    background:transparent;
+    border-radius: 50%;
+    text-align:center;
+    z-index: 2;
+    box-shadow:0 10px 10px rgba(0,0,0,0.1);
+    transition:all 0.4s cubic-bezier(0.68,-0.55,0.265,1.55) ease-in-out;
+    text-decoration: none;
+    color:white;
+}
+.wrapper .icon span i{
+    font-size:15px;
+    line-height:42px;
+}
+.wrapper.icon:hover span{
+    color:#fff;
+}
+ 
+.wrapper .icon:hover span{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+ 
+.wrapper .facebook:hover span{
+background:#3b5999;
+color:white;
+}
+ 
+.wrapper .instagram:hover span{
+    background: #f12e7c;
+    color:white;
+}
+.wrapper .pinterest:hover span{
+    background: #E60023;
+    color:white;
+}
+ 
+.wrapper .linked-in:hover span{
+    background: #0A66C2;
+    color:white;
+}
+ 
+ 
+.wrapper .twitter:hover span{
+    background: #0A66C2;
+    color:white;
+}  
+footer {
+/* position: fixed; */
+bottom: 0;
+}
+ 
+@media (max-height:800px) {
+footer {
+    position: static;
+}
+/* header {
+    padding-top: 40px;
+} */
+}
+ 
+.footer-distributed {
+background-color: #2d2a30;
+box-sizing: border-box;
+width: 99.9%;
+text-align: left;
+font: bold 16px sans-serif;
+padding: 50px 50px 60px 50px;
+margin-top: 80px;
+}
+ 
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+display: inline-block;
+vertical-align: top;
+}
+ 
+/* Footer left */
+ 
+.footer-distributed .footer-left {
+width: 30%;
+}
+ 
+.footer-distributed h3 {
+color: #ffffff;
+font: normal 36px 'Cookie', cursive;
+margin: 0;
+}
+ 
+ 
+.footer-distributed h3 span {
+color: #ff9a98;
+}
+ 
+/* Footer links */
+ 
+.footer-distributed .footer-links {
+color: #ffffff;
+margin: 20px 0 12px;
+}
+ 
+.footer-distributed .footer-links a {
+display: inline-block;
+line-height: 1.8;
+text-decoration: none;
+color: inherit;
+}
+ 
+.footer-distributed .footer-company-name {
+color: #8f9296;
+font-size: 14px;
+font-weight: normal;
+margin: 0;
+}
+ 
+/* Footer Center */
+ 
+.footer-distributed .footer-center {
+width: 35%;
+}
+.footer-center {
+    width: 35%;
+    }
+.footer-distributed .footer-center i {
+background-color: #33383b;
+color: #ffffff;
+font-size: 25px;
+width: 38px;
+height: 38px;
+border-radius: 50%;
+text-align: center;
+line-height: 42px;
+margin: 10px 15px;
+vertical-align: middle;
+}
+.footer-centers i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+    }    
+ 
+.footer-distributed .footer-center i.fa-envelope {
+font-size: 17px;
+line-height: 38px;
+}
+.footer-centers i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+ 
+}
+.footer-distributed .footer-center p {
+display: inline-block;
+color: #ffffff;
+vertical-align: middle;
+margin: 0;
+}
+.footer-centers p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+    }
+ 
+.footer-distributed .footer-center p span {
+display: block;
+font-weight: normal;
+font-size: 14px;
+line-height: 2;
+}
+.footer-centers p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+    }
+ 
+.footer-distributed .footer-center p a {
+color: rgb(166, 228, 255);
+text-decoration: none;
+}
+.footer-centers p a {
+    color: black;
+    text-decoration: none;
+    }
+ 
+/* Footer Right */
+ 
+.footer-distributed .footer-right {
+width: 30%;
+}
+ 
+.footer-distributed .footer-company-about {
+line-height: 20px;
+color: #92999f;
+font-size: 13px;
+font-weight: normal;
+margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span {
+display: block;
+color: #ffffff;
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons {
+margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a {
+display: inline-block;
+width: 35px;
+height: 35px;
+cursor: pointer;
+background-color: #33383b;
+border-radius: 2px;
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+line-height: 35px;
+margin-right: 3px;
+margin-bottom: 5px;
+}
+ 
+.footer-distributed .footer-icons a:hover {
+background-color: rgb(166, 228, 255);
+}
+.footer-links a{
+transition:all 0.4s ease-in-out;
+}
+ 
+.footer-links a:hover {
+color: rgb(166, 228, 255);
+}
+ 
+@media (max-width: 880px) {
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.footer-distributed .footer-center i {
+    margin-left: 0;
+}
+}  
+ 
